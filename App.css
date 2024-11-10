@@ -1,0 +1,161 @@
+
+.App {
+  text-align: center;
+  padding: 20px;
+  
+}
+
+input {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #157c00;
+  background-color: #ff8000;
+  color: white;
+  border: 2px solid rgb(93, 90, 90);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #001eff;
+}
+
+.me{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.meal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.meal-card {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #858a8b;
+  border-radius: 5px;
+  width: 200px;
+  overflow: hidden;
+  /* transition: all 0.5s; */
+}
+
+.imgcont{
+  overflow: hidden;
+}
+
+.meal-card:hover{
+  box-shadow: 2px 2px 10px;
+}
+
+.meal-card:hover img{
+  transform: rotate(15deg) scale(1.4);
+}
+
+.meal-card img {
+  width: 100%;
+  height: auto;
+  transition: all 0.5s;
+}
+
+.loadingAnime{
+  width: 400px;
+  height:30px;
+  border: 1px solid ;
+  margin:50px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.fixed{
+  font-size: 30px;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.mover{
+    width: 150px;
+    height:28px;
+    background-color: green;
+    position: absolute;
+    top:1.5px;
+    
+    animation: anime 2s infinite linear;
+}
+
+@keyframes anime {
+    0%{
+      left:0%;
+    }
+    50%{
+      left:120%;
+    }  
+    100%{
+      left:-120%;
+    }
+
+}
+
+.backtohome{
+  margin:50px;
+}
+
+.pavancard {
+  width: 100%;
+  margin:auto;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.pavancard:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 30px;
+}
+
+.pavancard-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.pavancard-title {
+  padding: 15px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+.pavancard-title h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.MealContainer{
+  text-align: center;
+  margin-top:100px;
+}
+
+@media (max-width: 600px) {
+  .pavancard {
+      max-width: 90%;
+  }
+
+  .pavancard-title h2 {
+      font-size: 1.2rem;
+  }
+
+  .loadingAnime{
+    max-width: 90%;
+  }
+}
